@@ -3,7 +3,8 @@
 # docker exec -it [containerid] /bin/bash
 # passwd root
 
-FROM nvcr.io/nvidia/tensorflow:20.09-tf1-py3
+ARG BASE_IMAGE=nvcr.io/nvidia/tensorflow:20.12-tf1-py3
+FROM $BASE_IMAGE
 
 WORKDIR /home
 
